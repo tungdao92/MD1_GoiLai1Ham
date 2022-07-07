@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuViDienTich(r) {
+        let chuVi=r*r*Math.PI
+        let dienTich=2*r*Math.PI
+        let a=[];
+        a.push(chuVi,dienTich)
+        return a;
+
+    } chuViDienTich();
+    r1=+prompt('Nhap ban kinh hinh 1');
+    r2=+prompt('Nhap ban kinh hinh 2');
+
+    function tiLe2Hinh() {
+        let tiLeChuVi = chuViDienTich(r1)[0]/chuViDienTich(r2)[0];
+        let tiLeDienTich=chuViDienTich(r1)[1]/chuViDienTich(r2)[1];
+        console.log('Ti le chu vi',tiLeChuVi)
+        console.log('ti le dien tich',tiLeDienTich)
+
+    }tiLe2Hinh()
+
+</script>
+
+</body>
+</html>

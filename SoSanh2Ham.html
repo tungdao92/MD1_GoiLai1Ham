@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="r1">
+<input type="number" id="r2">
+<button onclick="tiLe2Hinh()">TiLe</button>
+<h1> <span id="hienthi1"></span></h1>
+<h2> <span id="hienthi2"></span></h2>
+<script>
+    function dienTichChuVi(r) {
+        let dienTich=r*r*Math.PI
+        let chuVi=2*r*Math.PI
+        let chuViDienTich=[];
+        chuViDienTich.push(dienTich,chuVi);
+        return chuViDienTich;
+    }
+    dienTichChuVi()
+    function tiLe2Hinh() {
+        let r1= +document.getElementById('r1').value;
+        let r2= +document.getElementById('r2').value;
+        let s1=dienTichChuVi(r1)[0];
+        let s2=dienTichChuVi(r2)[0];
+        let c1=dienTichChuVi(r1)[1];
+        let c2=dienTichChuVi(r2)[1];
+        let tiLeChuVi = dienTichChuVi(r1)[0] / dienTichChuVi(r2)[0];
+        let tileDientich = dienTichChuVi(r1)[1] / dienTichChuVi(r2)[1];
+        document.getElementById('hienthi2').innerHTML='Chu vi 1:'+ c1 +'<br>' + 'chu vi 2:'+ c2 +'<br>'+
+            'Dien tich 1:'+ s1 +'<br>' + 'Dien tich 2:'+ s2
+        document.getElementById('hienthi1').innerHTML='Ti le chu vi :'+ tiLeChuVi+ '<br>' + 'ti le dien tich :'+ tileDientich
+
+    }
+
+</script>
+
+</body>
+</html>
